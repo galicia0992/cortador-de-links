@@ -73,6 +73,7 @@ h6 {
   text-align: center;
   position: relative;
   bottom: 10%;
+  margin: 0;
 }
 
 hr {
@@ -255,7 +256,7 @@ p {
   -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 10px 25px;
           box-shadow: rgba(0, 0, 0, 0.45) 0px 10px 25px;
   position: relative;
-  bottom: 50px;
+  bottom: 10%;
 }
 
 .buttStarted:hover {
@@ -301,11 +302,18 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   margin-top: 10%;
   background-color: #f1f0f5;
 }
@@ -332,7 +340,29 @@ p {
   background-image: url(/images/bg-shorten-desktop.svg);
 }
 
-.buttShort {
+.output {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-radius: 10px;
+  width: 70%;
+  height: 10%;
+  position: absolute;
+  bottom: -30%;
+  background-color: white;
+  padding: 0 2% 0 2%;
+}
+
+.buttShort, .buttShort2, .copied {
   font-family: 'Poppins';
   padding: 17px 40px 17px 40px;
   border-radius: 10px;
@@ -347,17 +377,22 @@ p {
           box-shadow: rgba(0, 0, 0, 0.45) 0px 10px 25px;
 }
 
-.buttShort:hover {
+.buttShort:hover, .buttShort2:hover {
   background-color: #3b3054;
   -webkit-transition: background-color 500ms linear;
   transition: background-color 500ms linear;
 }
 
-.buttShort:active {
+.buttShort:active, .buttShort2:active {
   -webkit-box-shadow: 0 5px #666;
           box-shadow: 0 5px #666;
   -webkit-transform: translateY(4px);
           transform: translateY(4px);
+}
+
+.buttShort2, .copied {
+  padding: 10px 25px 10px 25px;
+  border-radius: 5%;
 }
 
 .seccion3 {
@@ -368,9 +403,6 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -378,7 +410,7 @@ p {
 }
 
 .details {
-  top: 120%;
+  top: 130%;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -435,5 +467,91 @@ p {
   position: absolute;
   left: 10%;
   top: -15%;
+}
+
+.resultado {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 15px;
+  width: 70%;
+  height: 11vh;
+  background-color: white;
+  position: relative;
+  top: 100%;
+  padding: 0 1% 0 1%;
+}
+
+.linkShort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 35%;
+}
+
+.advanced {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 20%;
+  position: relative;
+}
+
+.linkButt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 30%;
+}
+
+#resultado {
+  color: #2acfcf;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: 'Poppins';
+}
+
+#link {
+  font-weight: 700;
+  font-size: 14px;
+  font-family: 'Poppins';
+}
+
+.copied {
+  background-color: #3b3054;
+}
+
+.none {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
